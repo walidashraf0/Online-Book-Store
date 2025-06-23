@@ -33,12 +33,12 @@ const Navbar = () => {
   return (
     <>
       <div className="shadow-md bg-white dark:bg-gray-900 dark:text-white duration-200">
-        <div className="mx-auto max-w-7xl py-3 sm:py-0">
+        <div className="container py-3 sm:py-0">
           <div className="flex justify-between items-center">
             <div>
-              <a className="flex items-center gap-2" href="#">
-                <img className="w-14" src={MyLogo} alt="logo" />
-                <span className="text-lg text-gray-500 font-bold">Books</span>
+              <a className="flex items-center gap-2 p-2" href="#">
+                <img className="w-14 rounded-full" src={MyLogo} alt="logo" />
+                <span className="text-lg text-gray-500 font-bold dark:text-white">Books</span>
               </a>
             </div>
             <div className="flex justify-between items-center gap-2">
@@ -69,7 +69,7 @@ const Navbar = () => {
                   </ul>
                 </li>
               </ul>
-              <button className="font-semibold flex items-center gap-1 bg-gradient-to-r from-blue-400 to-blue-300 hover:scale-105 cursor-pointer text-white px-4 py-1 rounded-full">
+              <button className="font-semibold flex items-center gap-1 bg-gradient-to-r from-primary to-secondary hover:scale-105 cursor-pointer text-white px-4 py-1 rounded-full">
                 Order
                 <ShoppingCart size={20} />
               </button>
