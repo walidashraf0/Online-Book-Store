@@ -18,7 +18,6 @@ const DarkMode = () => {
     }
   }, [theme]);
 
-  console.log(theme);
   return (
     <>
       <div className="relative">

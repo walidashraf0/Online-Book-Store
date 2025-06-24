@@ -59,7 +59,7 @@ const AllBooks = () => {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 place-items-center gap-5">
             {booksData.map((book) => (
-              <div>
+              <div key={book.id}>
                 <img
                   className="max-w-[300px] h-[250px] rounded-lg mb-3"
                   src={book.img}
