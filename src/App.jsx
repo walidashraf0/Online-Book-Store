@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import AllBooks from "./components/AllBooks/AllBooks";
 import AppStoreBanner from "./components/AppStoreBanner/AppStoreBanner";
 import Banner from "./components/Banner/Banner";
@@ -9,8 +9,15 @@ import Navbar from "./components/Navbar/Navbar";
 import Testimonials from "./components/Testimonials/Testimonials";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Popup from "./components/Popup/Popup";
 
 function App() {
+  const [popupOrder, setPopupOrder] = useState(false);
+
+  const handlePopupOrder = () => {
+    setPopupOrder(!popupOrder);
+  };
+
   useEffect(() => {
     AOS.init({
       offset: 100,
@@ -24,14 +31,15 @@ function App() {
   return (
     <>
       <div className="bg-white dark:bg-gray-900 dark:text-white duration-200">
-        <Navbar />
-        <Hero />
-        <BestBooks />
+        <Navbar handlePopupOrder={handlePopupOrder} />
+        <Hero handlePopupOrder={handlePopupOrder} />
+        <BestBooks handlePopupOrder={handlePopupOrder} />
         <Banner />
         <AppStoreBanner />
         <AllBooks />
         <Testimonials />
         <Footer />
+        <Popup handlePopupOrder={handlePopupOrder} popupOrder={popupOrder} />
       </div>
     </>
   );

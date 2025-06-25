@@ -28,7 +28,7 @@ const ServicesData = [
   },
 ];
 
-const BestBooks = () => {
+const BestBooks = ({ handlePopupOrder }) => {
   return (
     <>
       <div className=" bg-white dark:bg-gray-900 py-10">
@@ -69,7 +69,7 @@ const BestBooks = () => {
                   <p className="text-gray-500 group-hover:text-white duration-200 text-sm line-clamp-2">
                     {item.description}
                   </p>
-                  <button className="px-4 py-2 rounded-full bg-primary to-secondary cursor-pointer hover:scale-105 duration-200 group-hover:bg-white text-white group-hover:text-primary mt-4">
+                  <button onClick={handlePopupOrder} className="px-4 py-2 rounded-full bg-primary to-secondary cursor-pointer hover:scale-105 duration-200 group-hover:bg-white text-white group-hover:text-primary mt-4">
                     Order Now
                   </button>
                 </div>
