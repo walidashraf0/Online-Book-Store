@@ -66,7 +66,10 @@ const Testimonials = () => {
     <>
       <div className="pb-10">
         <div className="container">
-          <div className="dark:text-white text-center mx-auto max-w-[400px] mb-20">
+          <div
+            data-aos="slide-up"
+            className="dark:text-white text-center mx-auto max-w-[400px] mb-20"
+          >
             <p className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary mb-2">
               What our customer says
             </p>
@@ -76,7 +79,7 @@ const Testimonials = () => {
               iure, corporis
             </p>
           </div>
-          <div>
+          <div data-aos="zoom-in">
             <Slider {...settings}>
               {testimonialData.map((data) => (
                 <div className="my-6" key={data.id}>

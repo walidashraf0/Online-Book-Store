@@ -47,7 +47,10 @@ const AllBooks = () => {
     <>
       <div className="py-10">
         <div className="container">
-          <div className="dark:text-white text-center mx-auto max-w-[400px] mb-20">
+          <div
+            data-aos="slide-up"
+            className="dark:text-white text-center mx-auto max-w-[400px] mb-20"
+          >
             <p className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary mb-2">
               Best Books
             </p>
@@ -59,7 +62,7 @@ const AllBooks = () => {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 place-items-center gap-5">
             {booksData.map((book) => (
-              <div key={book.id}>
+              <div data-aos="slide-up" key={book.id}>
                 <img
                   className="max-w-[300px] h-[250px] rounded-lg mb-3"
                   src={book.img}

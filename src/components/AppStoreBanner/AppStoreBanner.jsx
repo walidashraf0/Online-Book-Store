@@ -19,10 +19,16 @@ const AppStoreBanner = () => {
       >
         <div className="container">
           <div className="space-y-6 max-w-xl mx-auto">
-            <h1 className="text-2xl font-semibold sm:text-4xl text-center">
+            <h1
+              data-aos="slide-up"
+              className="text-2xl font-semibold sm:text-4xl text-center"
+            >
               Read Books at your fingertips
             </h1>
-            <div className="flex items-center justify-center flex-wrap gap-4">
+            <div
+              data-aos="slide-up"
+              className="flex items-center justify-center flex-wrap gap-4"
+            >
               <a href="#">
                 <img
                   className="max-w-[150px] sm:max-w-[120px] md:max-w-[200px]"
